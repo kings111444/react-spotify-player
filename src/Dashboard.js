@@ -13,7 +13,7 @@ const spotifyApi = new SpotifyWebApi({
 export default function Dashboard( {code} ) {
     const accessToken = useAuth(code)
     const [search, setSearch] = useState('')
-    const [searchResults, setSearchResults] = useState('')
+    const [searchResults, setSearchResults] = useState([])
     console.log(searchResults)
     useEffect(() => {
         if (!accessToken) return
